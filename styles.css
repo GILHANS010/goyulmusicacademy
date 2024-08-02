@@ -378,20 +378,48 @@ footer {
     animation: fadeIn 2s ease-in-out;
 }
 
-.introduction-content p {
-    font-size: 18px;
-    line-height: 1.6;
-    color: #555;
-    margin-bottom: 20px;
-    text-align: justify;
-    animation: fadeIn 2s ease-in-out;
+.introduction-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
 }
 
-.introduction-content p::first-letter {
+.info-card {
+    background: linear-gradient(135deg, #d8a692 0%, #eac5b7 100%);
+    color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.info-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.info-card i {
+    font-size: 40px;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    opacity: 0.2;
+}
+
+.info-card p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: justify;
+}
+
+.info-card p::first-letter {
     font-size: 24px;
     font-weight: bold;
-    color: #333;
 }
+
 
 #lessons-overview {
     background: linear-gradient(to bottom right, #fbf1ef, #fff9f8);
